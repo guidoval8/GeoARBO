@@ -355,9 +355,9 @@ try:
     #Botão para gerar o mapa
     if st.button("Gerar mapa", type="primary"):
         if not se_selecionada:
-            st.warning("Selecione uma semana.")
+            st.warning("Selecione a(s) Semanas Epidemiológicas (máx 5).")
         elif not uvis_selecionada:
-            st.warning("Selecione uma UVIS.")
+            st.warning("Selecione uma(s) UVIS (máx 5).")
         else:
             #Salvar filtros atuais em session_state (CACHE)
             st.session_state["last_filters"] = (tuple(sorted(se_selecionada)), tuple(sorted(map(str, uvis_selecionada))))
@@ -372,7 +372,7 @@ try:
     need_generate = st.session_state.get("map_needs_update", False) or (st.session_state.get("last_filters") != filtros_atuais)
 
     if st.session_state.get("last_filters") is None and not need_generate:
-        st.info("Escolha filtros e clique em 'Gerar mapa' para visualizar.")
+        st.info("Selecione a(s) semanas e a(s) UVIS e clique em 'Gerar mapa' para visualizar.")
     else:
         if st.session_state.get("last_filters") != filtros_atuais:
             st.session_state["last_filters"] = filtros_atuais
