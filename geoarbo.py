@@ -344,16 +344,15 @@ def criar_mapa_html(pontos, uvis_gdf, crs_gdf, quadras_gdf, buffer_gdf = None, b
 try:
     casos, uvis, crs, quadras, bcc, bcn, tcd = carregar_dados(CAMINHO_CASOS, CAMINHO_UVIS, CAMINHO_CRS, CAMINHO_QUADRAS, CAMINHO_BCC, CAMINHO_BCN, CAMINHO_TCD)
 
-    st.subheader("Selecione a(s) UVIS (máx. 5):")
-
     #Opções para filtro
     uvis_disp = sorted(casos["SUVIS"].unique())
-
-    st.subheader("Selecione a(s) Semanas Epidemiológicas (máx. 5):")
     se_disp = sorted(casos["SE"].unique())
 
     #Widgets de seleção
+    st.subheader("Selecione a(s) UVIS (máx. 5):")
     uvis_selecionada = st.multiselect("UVIS:", uvis_disp, max_selections=5)
+    
+    st.subheader("Selecione a(s) Semanas Epidemiológicas (máx. 5):")
     se_selecionada = st.multiselect("Semana Epidemiológica:", se_disp, max_selections=5)
 
     #Botão para gerar o mapa
