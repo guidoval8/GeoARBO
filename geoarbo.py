@@ -349,8 +349,8 @@ try:
     se_disp = sorted(casos["SE"].unique())
 
     #Widgets de seleção
-    uvis_selecionada = st.multiselect("UVIS:", uvis_disp)
-    se_selecionada = st.multiselect("Semana Epidemiológica:", se_disp)
+    uvis_selecionada = st.multiselect("UVIS:", uvis_disp, max_selections=5)
+    se_selecionada = st.multiselect("Semana Epidemiológica:", se_disp, max_selections=5)
 
     #Botão para gerar o mapa
     if st.button("Gerar mapa", type="primary"):
