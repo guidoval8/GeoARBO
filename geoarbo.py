@@ -420,7 +420,7 @@ try:
             se_texto = ", ".join(map(str, sorted(semanas_tuple)))
 
             st.markdown("---")
-            st.subheader(f"Visualização do Mapa - {len(casos_filtrados)} casos na(s) UVIS {uvis_texto} na(s) SE {se_texto}")
+            st.subheader(f"Visualização do Mapa - {len(casos_filtrados)} casos confirmados na(s) UVIS {uvis_texto} na(s) SE {se_texto}")
 
             if casos_filtrados.empty:
                 st.warning("Nenhum caso para o período selecionado.")
