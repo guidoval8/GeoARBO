@@ -60,6 +60,7 @@ def style_function_tcd(feature):
         return {"fillOpacity": 0.0, "color": "black", "weight": 1.5}
 
 #----CARREGAR DADOS (CACHE)----#
+@st.cache_data
 def carregar_dados(caminho_casos, caminho_uvis, caminho_crs, caminho_quadras, caminho_bcc, caminho_bcn, caminho_tcd):
 
     casos = gpd.read_file(caminho_casos).to_crs(epsg=4326)   
