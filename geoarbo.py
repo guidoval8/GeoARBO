@@ -157,7 +157,7 @@ def preparar_pontos_para_cluster(casos_filtrados):
         popup_texto = (
             f"<b>N ficha:</b> {row.get('NU_NOTIFIC', 'N/A')}<br>"
             f"<b>SINAN:</b> {row.get('ID_AGRAVO', 'N/A')}<br>"
-            f"<b>Data Notificação:</b> {dt_text}<br>"
+            f"<b>Data Primeiro Sintoma:</b> {dt_text}<br>"
             f"<b>Semana (SE):</b> {row.get('SE', 'N/A')}<br><br>"
             f"<b>CRS:</b> {row.get('CRS', 'N/A')}<br>"
             f"<b>UVIS:</b> {row.get('SUVIS', 'N/A')}<br>"
