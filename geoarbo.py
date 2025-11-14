@@ -16,6 +16,7 @@ from jinja2 import Template
 #----CONFIG----#
 st.set_page_config(layout="wide")
 st.title("GeoARBO")
+st.markdown("---")
 #--------------#
 
 #----CAMINHO----#
@@ -343,10 +344,12 @@ def criar_mapa_html(pontos, uvis_gdf, crs_gdf, quadras_gdf, buffer_gdf = None, b
 try:
     casos, uvis, crs, quadras, bcc, bcn, tcd = carregar_dados(CAMINHO_CASOS, CAMINHO_UVIS, CAMINHO_CRS, CAMINHO_QUADRAS, CAMINHO_BCC, CAMINHO_BCN, CAMINHO_TCD)
 
-    st.subheader("Período:")
+    st.subheader("Selecione a(s) UVIS (máx. 5):")
 
     #Opções para filtro
     uvis_disp = sorted(casos["SUVIS"].unique())
+
+    st.subheader("Selecione a(s) Semanas Epidemiológicas (máx. 5):")
     se_disp = sorted(casos["SE"].unique())
 
     #Widgets de seleção
