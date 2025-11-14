@@ -19,13 +19,13 @@ st.title("GeoARBO")
 #--------------#
 
 #----CAMINHO----#
-CAMINHO_CASOS = r"C:\Users\x504402\Documents\Py\GeoARBO\Shapes\CASOS\CASOS.shp"
-CAMINHO_CRS = r"C:\Users\x504402\Documents\Py\GeoARBO\Shapes\crs.shp"
-CAMINHO_UVIS = r"C:\Users\x504402\Documents\Py\GeoARBO\Shapes\uvis.shp"
-CAMINHO_QUADRAS = r"C:\Users\x504402\Documents\Py\GeoARBO\Shapes\QDRsiscoz_antigas.shp"
-CAMINHO_BCC = r"C:\Users\x504402\Documents\Py\GeoARBO\Shapes\Bloqueios\BCC.shp"
-CAMINHO_BCN = r"C:\Users\x504402\Documents\Py\GeoARBO\Shapes\Bloqueios\BCN.shp"
-CAMINHO_TCD = r"C:\Users\x504402\Documents\Py\GeoARBO\Shapes\Bloqueios\TCD.shp"
+CAMINHO_CASOS = "Shapes\CASOS\CASOS.shp"
+CAMINHO_CRS = "Shapes\crs.shp"
+CAMINHO_UVIS = "Shapes\uvis.shp"
+CAMINHO_QUADRAS = "Shapes\QDRsiscoz_antigas.shp"
+CAMINHO_BCC = "Shapes\Bloqueios\BCC.shp"
+CAMINHO_BCN = "Shapes\Bloqueios\BCN.shp"
+CAMINHO_TCD = "Shapes\Bloqueios\TCD.shp"
 #---------------#
 
 #----ESTILOS DE POLÍGONO FOLIUM----#
