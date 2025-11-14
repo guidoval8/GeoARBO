@@ -227,7 +227,7 @@ def criar_mapa_html(pontos, uvis_gdf, crs_gdf, quadras_gdf, buffer_gdf = None, b
         quadras_gdf,
         style_function=style_function_quadras,
         name="Quadras (Polígonos)",
-        popup=folium.GeoJsonPopup(fields=['CODQUADRA', 'CRS', 'SUVIS', 'NMDIST']),
+        popup=folium.GeoJsonPopup(fields=['CODQUADRA', 'SUVIS']),
         show=False
     ).add_to(m)
 
