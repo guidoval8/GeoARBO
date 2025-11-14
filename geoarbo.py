@@ -23,7 +23,7 @@ st.markdown("---")
 CAMINHO_CASOS = "Shapes/CASOS/CASOS.shp"
 CAMINHO_CRS = "Shapes/crs.shp"
 CAMINHO_UVIS = "Shapes/uvis.shp"
-CAMINHO_QUADRAS = "Shapes/QDRsiscoz_antigas.shp"
+CAMINHO_QUADRAS = "Shapes/qdr.gpkg"
 CAMINHO_BCC = "Shapes/Bloqueios/BCC.shp"
 CAMINHO_BCN = "Shapes/Bloqueios/BCN.shp"
 CAMINHO_TCD = "Shapes/Bloqueios/TCD.shp"
