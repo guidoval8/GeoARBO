@@ -152,8 +152,8 @@ def preparar_pontos_para_cluster(casos_filtrados):
     coords = [(geom.y, geom.x) for geom in casos_filtrados.geometry]
     #Popups
     for (lat, lon), (_, row) in zip(coords, casos_filtrados.iterrows()):
-        dt_not = row["DT_NOTIFIC"]
-        dt_text = dt_not.strftime("%d/%m/%Y") if pd.notna(dt_not) else "N/A"
+        dt_sinpri = row["DT_SIN_PRI"]
+        dt_text = dt_sinpri.strftime("%d/%m/%Y") if pd.notna(dt_sinpri) else "N/A"
         popup_texto = (
             f"<b>N ficha:</b> {row.get('NU_NOTIFIC', 'N/A')}<br>"
             f"<b>SINAN:</b> {row.get('ID_AGRAVO', 'N/A')}<br>"
@@ -162,7 +162,6 @@ def preparar_pontos_para_cluster(casos_filtrados):
             f"<b>CRS:</b> {row.get('CRS', 'N/A')}<br>"
             f"<b>UVIS:</b> {row.get('SUVIS', 'N/A')}<br>"
             f"<b>DA:</b> {row.get('NOME_DISTR', 'N/A')}<br><br>"
-            f"<b>Nome:</b> {row.get('NM_PACIENT', 'N/A')}<br>"
             f"<b>Endereço:</b> {row.get('NM_LOGRADO', 'N/A')}<br>"
             f"<b>Número:</b> {row.get('NU_NUMERO', 'N/A')}<br>"
             f"<b>CEP:</b> {row.get('NU_CEP', 'N/A')}<br>"
